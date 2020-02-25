@@ -2,7 +2,7 @@ public class Practice {
 
     public static void main(String[] args) {
 
-        System.out.println(sleepIn(true,true));
+        System.out.println(sleepIn(false,true));
         System.out.println(monkeyTrouble(true,true));
         System.out.println(sumDouble(1,2));
         System.out.println(sumDouble(2,2));
@@ -16,17 +16,11 @@ public class Practice {
     }
 
     private static boolean sleepIn(boolean weekday, boolean vacation) {
-        if (!weekday || vacation) {
-            return true;
-        } else return false;
-
+        return !weekday || vacation;
     }
 
     public static boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-        if (aSmile&&bSmile || !aSmile&&!bSmile) {
-            return true;
-        }
-        return false;
+        return aSmile && bSmile || !aSmile && !bSmile;
     }
 
     public static int sumDouble(int a, int b) {
@@ -48,15 +42,10 @@ public class Practice {
     }
 
     public static boolean parrotTrouble(boolean talking, int hour) {
-        if (talking && (hour < 7 || hour > 20)) {
-            return talking = true;
-        }
-        return false;
+        return talking && (hour < 7 || hour > 20);
     }
 
     public static boolean makes10(int a, int b) {
-        if (a==10 || b==10 || a+b==10){
-            return true;}
-        return false;
+        return a == 10 || b == 10 || a + b == 10;
     }
 }
